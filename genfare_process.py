@@ -84,7 +84,7 @@ def get_file_path(args):
     print(f"path from args: {args_path}")
     if args_path:
         genfare_path = args_path
-    DIR = wslPath.toPosix(genfare_path)
+    DIR = wslPath.to_posix(genfare_path)
     print(f"path: {DIR}")
 
     # GENFARE_FILE=f"{GENFARE_PATH}/{filename}"

@@ -31,10 +31,10 @@ from dotenv import load_dotenv
 load_dotenv()
 
 gf_input_path = f"{os.getenv('GF_INPUT_PATH')}"
-gf_input_path = wslPath.toPosix(gf_input_path)
+gf_input_path = wslPath.to_posix(gf_input_path)
 
 gf_output_path = f"{os.getenv('GF_OUTPUT_PATH')}"
-gf_output_path = wslPath.toPosix(gf_output_path)
+gf_output_path = wslPath.to_posix(gf_output_path)
 
 dropfile_name = f"{os.getenv('DROPFILE')}"
 
@@ -50,7 +50,7 @@ def process_batch(file_path,file_list):
       file_path
     """
     #header_file_path = f"{os.getenv('HEADER_FILE_PATH')}"
-    #header_path = wslPath.toPosix(header_file_path)
+    #header_path = wslPath.to_posix(header_file_path)
     day_dict_list = []
     all_days_miles = []
     types = {'vehicle': 'string', 'time': 'object', 'lat': 'string', \
